@@ -20,9 +20,10 @@ const ProductsNavigator = createStackNavigator(
       headerTitleStyle: {
         fontFamily: "open-sans-bold"
       },
-      headerBackTitle: {
+      headerBackTitleStyle: {
         fontFamily: "open-sans"
       },
+
       headerTintColor: Platform.OS === "android" ? "white" : Colors.primary
     }
   }
