@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import { useSelector } from "react-redux";
 import ProductItem from "../../components/ProductItem";
 import { useNavigation } from "react-navigation-hooks";
