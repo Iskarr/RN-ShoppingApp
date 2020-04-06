@@ -6,11 +6,13 @@ import * as Font from "expo-font";
 
 import productReducer from "./store/reducers/products";
 import cartReducer from "./store/reducers/cart";
+import ordersReducer from "./store/reducers/orders";
 import ShopNavigator from "./navigation/ShopNavigator";
 
 const rootReducer = combineReducers({
   products: productReducer,
-  cart: cartReducer
+  cart: cartReducer,
+  orders: ordersReducer,
 });
 
 const store = createStore(rootReducer);
@@ -18,7 +20,7 @@ const store = createStore(rootReducer);
 const fetchFonts = async () => {
   await Font.loadAsync({
     "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
-    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf")
+    "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
   });
 };
 
