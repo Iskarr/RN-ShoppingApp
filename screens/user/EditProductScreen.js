@@ -14,6 +14,8 @@ import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import { useSelector, useDispatch } from "react-redux";
 import * as productActions from "../../store/actions/products";
 
+// New stuff to come.
+
 const EditProductScreen = (props) => {
   const prodId = props.navigation.getParam("productId");
   const editedProduct = useSelector((state) =>
