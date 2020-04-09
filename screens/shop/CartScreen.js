@@ -7,6 +7,8 @@ import * as cartAction from "../../store/actions/cart";
 import * as orderActions from "../../store/actions/orders";
 import Card from "../../components/UI/Card";
 
+// Server to be added.
+
 const CartScreen = (props) => {
   const cartTotalAmount = useSelector((state) => state.cart.totalAmount);
   const cartItems = useSelector((state) => {
