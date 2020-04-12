@@ -26,6 +26,7 @@ const ProductOverviewScreen = (props) => {
   const dispatch = useDispatch();
 
   const loadProducts = useCallback(async () => {
+    console.log("PRODUCTS LOADED");
     setError(null);
     setIsLoading(true);
     try {
@@ -35,6 +36,17 @@ const ProductOverviewScreen = (props) => {
     }
     setIsLoading(false);
   }, [dispatch, setIsLoading, setError]);
+
+  useEffect(() => {
+    const willFocusSub = props.navigation.addListener(
+      "willFocus",
+      loadProducts
+    );
+
+    return () => {
+      willFocusSub.remove();
+    };
+  }, [loadProducts]);
 
   useEffect(() => {
     loadProducts();
